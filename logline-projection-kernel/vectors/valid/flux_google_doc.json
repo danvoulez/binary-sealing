@@ -1,0 +1,23 @@
+{
+  "kind": "flux.manifest.v0",
+  "source_record_id": "source:abc123",
+  "record_id": "proc:abc123",
+  "this": "gdoc:projection-kernel-pack@rev42",
+  "when": "2026-07-02T12:00:00Z",
+  "custody_root": "/tmp/NAS/Minivault/flux/00_raw_google_docs/gdoc_projection-kernel-pack@rev42/2026-07-02T12_00_00Z",
+  "blobs": [
+    {
+      "role": "raw",
+      "filename": "source.txt",
+      "path": "/tmp/NAS/Minivault/flux/00_raw_google_docs/gdoc_projection-kernel-pack@rev42/2026-07-02T12_00_00Z/raw/source.txt",
+      "media_type": "text/plain",
+      "bytes": 42,
+      "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "normalized_text_path": "/tmp/NAS/Minivault/flux/00_raw_google_docs/gdoc_projection-kernel-pack@rev42/2026-07-02T12_00_00Z/normalized/normalized.txt",
+  "normalized_text_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "manifest_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "projection_ready": true,
+  "next_actions": ["index_cerebro"]
+}

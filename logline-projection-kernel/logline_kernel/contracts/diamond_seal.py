@@ -1,0 +1,1 @@
+"""DiamondSeal process contract."""

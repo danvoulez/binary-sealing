@@ -1,0 +1,8 @@
+{
+  "process_id": "flux.google_doc.v0",
+  "version": "0.1.0",
+  "title": "Flux",
+  "colour": "blue",
+  "lens_id": "flux.v0",
+  "allowed_statuses": ["registered"]
+}

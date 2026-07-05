@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "projection",
+  "type": "object",
+  "required": ["lens_id", "lens_hash", "scope", "actor", "purpose", "source_records", "excluded_records", "selection_trace", "doubt_map", "doubt_summary", "capability_map", "policy_blockers", "safe_next_actions", "projection_hash", "source_boundary_hash"],
+  "properties": {
+    "lens_id": {"type": "string"},
+    "lens_hash": {"type": "string"},
+    "scope": {"type": "object"},
+    "actor": {"type": "string"},
+    "purpose": {"type": "string"},
+    "source_records": {"type": "array", "items": {"type": "string"}},
+    "excluded_records": {"type": "array", "items": {"type": "object"}},
+    "selection_trace": {"type": "array", "items": {"type": "object"}},
+    "doubt_map": {"type": "object"},
+    "doubt_summary": {"type": "object"},
+    "capability_map": {"type": "object"},
+    "policy_blockers": {"type": "array", "items": {"type": "string"}},
+    "safe_next_actions": {"type": "array", "items": {"type": "string"}},
+    "built_at": {"type": "string"},
+    "projection_hash": {"type": "string"},
+    "source_boundary_hash": {"type": "string"},
+    "meta": {"type": "object"}
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "diamond_resolution",
+  "type": "object",
+  "required": ["kind", "resolution_hash", "request_hash", "resolution_state", "selected_diamond_id", "selected_manifest_path", "candidates", "resolution_path"],
+  "properties": {
+    "kind": {"type": "string"},
+    "resolution_hash": {"type": "string"},
+    "request_hash": {"type": "string"},
+    "resolution_state": {"type": "string"},
+    "selected_diamond_id": {"type": ["string", "null"]},
+    "selected_manifest_path": {"type": ["string", "null"]},
+    "candidates": {"type": "array", "items": {"type": "object"}},
+    "access_request_hint": {"type": ["object", "null"]},
+    "resolution_path": {"type": "string"},
+    "created_at": {"type": "string"}
+  }
+}

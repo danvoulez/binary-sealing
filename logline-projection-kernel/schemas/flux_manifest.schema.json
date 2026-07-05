@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "flux_manifest",
+  "type": "object",
+  "required": ["kind", "source_record_id", "record_id", "this", "when", "custody_root", "blobs", "normalized_text_path", "manifest_hash"],
+  "properties": {
+    "kind": {"type": "string"},
+    "source_record_id": {"type": "string"},
+    "record_id": {"type": "string"},
+    "this": {"type": "string"},
+    "when": {"type": "string"},
+    "custody_root": {"type": "string"},
+    "blobs": {"type": "array", "items": {"type": "object"}},
+    "normalized_text_path": {"type": "string"},
+    "normalized_text_hash": {"type": "string"},
+    "manifest_hash": {"type": "string"},
+    "projection_ready": {"type": "boolean"},
+    "next_actions": {"type": "array", "items": {"type": "string"}}
+  }
+}

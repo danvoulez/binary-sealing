@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "diamond_state_event",
+  "type": "object",
+  "required": ["kind", "diamond_id", "previous_state", "new_state", "mode", "reason", "authority_id", "state_event_hash", "state_event_path"],
+  "properties": {
+    "kind": {"type": "string"},
+    "diamond_id": {"type": "string"},
+    "previous_state": {"type": "string"},
+    "new_state": {"type": "string"},
+    "mode": {"type": "string"},
+    "reason": {"type": "string"},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "successor_diamond_id": {"type": ["string", "null"]},
+    "successor_manifest_path": {"type": ["string", "null"]},
+    "authority_id": {"type": "string"},
+    "state_event_hash": {"type": "string"},
+    "state_event_path": {"type": "string"},
+    "created_at": {"type": "string"}
+  }
+}

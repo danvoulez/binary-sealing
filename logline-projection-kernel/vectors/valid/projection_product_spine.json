@@ -1,0 +1,27 @@
+{
+  "lens_id": "kernel.product_spine.v1",
+  "lens_hash": "lens:abc123",
+  "scope": {"project": "logline_projection_kernel"},
+  "actor": "op:test",
+  "purpose": "Product spine projection",
+  "source_records": ["source:abc123"],
+  "excluded_records": [],
+  "selection_trace": [
+    {"source_record_id": "source:abc123", "rule": "include_concept", "decision": "include"}
+  ],
+  "doubt_map": {"source:abc123": "known"},
+  "doubt_summary": {
+    "max_state": "known",
+    "max_severity": 0,
+    "counts": {"known": 1},
+    "safe_to_continue": true,
+    "safe_to_act": true
+  },
+  "capability_map": {"source:abc123": "projectable"},
+  "policy_blockers": [],
+  "safe_next_actions": ["test_sealability"],
+  "built_at": "2026-07-02T12:00:00Z",
+  "projection_hash": "proj:abc123",
+  "source_boundary_hash": "boundary:abc123",
+  "meta": {"is_projection": true}
+}

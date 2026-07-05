@@ -1,0 +1,21 @@
+FLUX_GOOGLE_DOC = ProcessContract(
+    process_id="flux.google_doc.v1",
+    title="Flux Google Doc Revision to NAS",
+    colour="blue",
+    engine="flux_engine",
+    lens_id="flux.document_revision.v1",
+    allowed_statuses={"registered", "doubt", "blocked", "qualified"},
+    required_aux=["origin", "custody"],
+    effects_allowed=False,
+    slot_rules={
+        "who": SlotRule("Operator requesting or performing the flux", required=True),
+        "did": SlotRule("Flux action: observed/exported/normalized/linked", required=True),
+        "this": SlotRule("Google Doc pointer or revision identity", required=True),
+        "when": SlotRule("Observation or export timestamp", required=True),
+        "confirmed_by": SlotRule("Drive revision id or export content hash", required=True),
+        "if_ok": SlotRule("Next custody step if flux is accepted", required=True),
+        "if_doubt": SlotRule("Quarantine or review action", required=True),
+        "if_not": SlotRule("Fallback if export is invalid", required=True),
+        "status": SlotRule("Process state", required=True),
+    },
+)

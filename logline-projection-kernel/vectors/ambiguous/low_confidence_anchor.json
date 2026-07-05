@@ -1,0 +1,17 @@
+{
+  "request_hash": "anchor-request:abc123",
+  "anchor_state": "selected",
+  "selected_anchor": {
+    "anchor_id": "anchor:abc123",
+    "score": 1,
+    "reasons": ["weak_concept_match"]
+  },
+  "alternatives": [
+    {"anchor_id": "anchor:def456", "score": 1}
+  ],
+  "boundary": {"included": [], "excluded": []},
+  "allowed_meanings": ["logline"],
+  "forbidden_meanings": [],
+  "safe_next_actions": ["human_review"],
+  "package_hash": "anchor-package:abc123"
+}

@@ -1,0 +1,1 @@
+"""ProjectionProductSpine process contract."""

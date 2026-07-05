@@ -1,0 +1,11 @@
+{
+  "process_id": "flux.google_doc.v0",
+  "contract_hash": "process:abc123",
+  "record_id": "proc:abc123",
+  "record": {"who": "x", "did": "y", "this": "gdoc:doc@1", "when": "2026-07-02T12:00:00Z", "status": "registered"},
+  "registered_at": "2026-07-02T12:00:00Z",
+  "registered_by": "op:test",
+  "registration_state": "ignited",
+  "capability_state": "registered",
+  "light": {"colour": "blue", "engine": "flux_engine"}
+}

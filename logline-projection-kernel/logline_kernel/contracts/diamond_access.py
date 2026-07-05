@@ -1,0 +1,1 @@
+"""DiamondAccess process contract."""

@@ -1,0 +1,2 @@
+LogLine Projection Kernel Pack
+This is a sample source document for examples.

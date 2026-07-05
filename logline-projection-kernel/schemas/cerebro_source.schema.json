@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "cerebro_source",
+  "type": "object",
+  "required": ["kind", "cerebro_source_id", "source_record_id", "title", "summary", "concepts", "fold_state", "projection_ready"],
+  "properties": {
+    "kind": {"type": "string"},
+    "cerebro_source_id": {"type": "string"},
+    "source_record_id": {"type": "string"},
+    "title": {"type": "string"},
+    "summary": {"type": "string"},
+    "concepts": {"type": "array", "items": {"type": "string"}},
+    "fold_state": {"type": "string"},
+    "projection_ready": {"type": "boolean"},
+    "source_card_path": {"type": "string"},
+    "graph_path": {"type": "string"},
+    "next_actions": {"type": "array", "items": {"type": "string"}}
+  }
+}

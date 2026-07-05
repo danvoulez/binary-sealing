@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "diamond_manifest",
+  "type": "object",
+  "required": ["kind", "diamond_id", "diamond_candidate_id", "diamond_kind", "title", "purpose", "projection_hash", "source_boundary_hash", "sealability_report_hash", "manifest_hash", "state", "created_at", "created_by"],
+  "properties": {
+    "kind": {"type": "string"},
+    "diamond_id": {"type": "string"},
+    "diamond_candidate_id": {"type": "string"},
+    "diamond_kind": {"type": "string"},
+    "title": {"type": "string"},
+    "purpose": {"type": "string"},
+    "projection_hash": {"type": "string"},
+    "source_boundary_hash": {"type": "string"},
+    "sealability_report_hash": {"type": "string"},
+    "sealability_context": {"type": "object"},
+    "artifacts": {"type": "array", "items": {"type": "object"}},
+    "manifest_hash": {"type": "string"},
+    "state": {"type": "string"},
+    "created_at": {"type": "string"},
+    "created_by": {"type": "string"}
+  }
+}

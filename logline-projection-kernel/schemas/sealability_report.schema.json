@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "sealability_report",
+  "type": "object",
+  "required": ["kind", "projection_hash", "source_boundary_hash", "sealable", "doubt_summary", "requirements", "context", "report_hash"],
+  "properties": {
+    "kind": {"type": "string"},
+    "projection_hash": {"type": "string"},
+    "source_boundary_hash": {"type": "string"},
+    "sealable": {"type": "boolean"},
+    "doubt_summary": {"type": "object"},
+    "requirements": {"type": "array", "items": {"type": "object"}},
+    "context": {"type": "object"},
+    "report_hash": {"type": "string"},
+    "created_at": {"type": "string"}
+  }
+}

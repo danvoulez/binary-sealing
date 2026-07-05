@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "diamond_access_receipt",
+  "type": "object",
+  "required": ["kind", "diamond_id", "request_hash", "decision_hash", "allowed", "mode", "receipt_hash", "receipt_path", "package_path"],
+  "properties": {
+    "kind": {"type": "string"},
+    "diamond_id": {"type": "string"},
+    "request_hash": {"type": "string"},
+    "decision_hash": {"type": "string"},
+    "allowed": {"type": "boolean"},
+    "mode": {"type": "string"},
+    "receipt_hash": {"type": "string"},
+    "receipt_path": {"type": "string"},
+    "package_path": {"type": "string"},
+    "index_path": {"type": "string"},
+    "next_actions": {"type": "array", "items": {"type": "string"}}
+  }
+}

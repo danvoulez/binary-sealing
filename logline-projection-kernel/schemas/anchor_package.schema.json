@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "anchor_package",
+  "type": "object",
+  "required": ["request_hash", "anchor_state", "selected_anchor", "alternatives", "boundary", "allowed_meanings", "forbidden_meanings", "safe_next_actions", "package_hash"],
+  "properties": {
+    "request_hash": {"type": "string"},
+    "anchor_state": {"type": "string"},
+    "selected_anchor": {"type": ["object", "null"]},
+    "alternatives": {"type": "array", "items": {"type": "object"}},
+    "boundary": {"type": "object"},
+    "allowed_meanings": {"type": "array", "items": {"type": "string"}},
+    "forbidden_meanings": {"type": "array", "items": {"type": "string"}},
+    "safe_next_actions": {"type": "array", "items": {"type": "string"}},
+    "no_anchor_reason": {"type": ["string", "null"]},
+    "created_at": {"type": "string"},
+    "package_hash": {"type": "string"}
+  }
+}

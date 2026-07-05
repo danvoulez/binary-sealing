@@ -1,0 +1,10 @@
+{
+  "kind": "diamond.access_receipt.v0",
+  "diamond_id": "diamond:abc123",
+  "request_hash": "access-request:abc123",
+  "decision_hash": "access-decision:abc123",
+  "allowed": true,
+  "mode": "read",
+  "receipt_path": "/tmp/receipt.json",
+  "package_path": "/tmp/package.json"
+}

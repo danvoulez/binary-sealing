@@ -1,0 +1,16 @@
+{
+  "lens_id": "test.lens",
+  "lens_hash": "lens:abc123",
+  "scope": {},
+  "actor": "op:test",
+  "purpose": "Test",
+  "source_records": [],
+  "excluded_records": [],
+  "selection_trace": [],
+  "doubt_map": {},
+  "doubt_summary": {},
+  "capability_map": {},
+  "policy_blockers": [],
+  "safe_next_actions": [],
+  "projection_hash": "proj:abc123"
+}

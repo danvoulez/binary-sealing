@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "logline-projection-kernel"
+version = "0.1.0"
+description = "LogLine Projection Kernel: turns admitted consequence-bearing Acts into bounded projections and sealed Diamonds."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+logline = "logline_kernel.cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["logline_kernel*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

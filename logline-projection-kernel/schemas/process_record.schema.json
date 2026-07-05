@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "process_record",
+  "type": "object",
+  "required": ["process_id", "contract_hash", "record_id", "record", "registered_at", "registration_state", "capability_state"],
+  "properties": {
+    "process_id": {"type": "string"},
+    "contract_hash": {"type": "string"},
+    "record_id": {"type": "string"},
+    "record": {"type": "object"},
+    "registered_at": {"type": "string", "format": "date-time"},
+    "registered_by": {"type": "string"},
+    "registration_state": {"type": "string"},
+    "capability_state": {"type": "string"},
+    "light": {"type": "object"},
+    "process_record_id": {"type": "string"},
+    "entry_hash": {"type": "string"},
+    "prev_hash": {"type": "string"}
+  }
+}
