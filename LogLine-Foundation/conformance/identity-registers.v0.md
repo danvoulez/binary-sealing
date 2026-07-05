@@ -67,13 +67,53 @@ same discipline to identifiers themselves: an engine's working reference
 has engine scope, and forcing it into canon would launder engine internals
 into semantic authority.
 
+## Field-aware enforcement
+
+The boundary rule classifies **fields, not raw strings**. Canon slots are
+strings by design; a receipt can legitimately carry
+
+```text
+did    = "diamond.privacy.bounded_leakage"
+who    = "diamond_compiler"
+status = "executed"
+```
+
+and none of these are identity violations, whatever prefix-like substrings
+they contain. They are vocabulary. The register check applies only where a
+profile or vocabulary declares a field to be **identity-bearing**:
+
+```text
+identity-bearing (register check applies):
+  id
+  this          — when the governing vocabulary declares it an address
+                  (e.g. diamond.receipts.v0 declares this = hex64)
+  *_hash, *_id, *_ref
+  hashes.*      — tuple_hash, content_hash
+  envelope_hash
+  payload.digest, source_commitments.merkle_root, receipts[]
+
+vocabulary / prose (no register check):
+  who, did, status
+  privacy_mode, mode, reason, scope
+  container_profile, target_tasks, evaluator, grantee
+  any field a profile declares as free text
+```
+
+A conformance checker MUST therefore know which profile governs the object
+before enforcing registers. "No colons anywhere in canon JSON" is not the
+rule and would be wrong.
+
 ## Conformance
 
-- A receipt or manifest field expected to be a semantic address MUST match
-  `^[0-9a-f]{64}$`. Prefixed values fail.
+- A field declared identity-bearing by its governing profile MUST match its
+  register's format — `^[0-9a-f]{64}$` for semantic addresses and digests.
+  Prefixed values fail *in those fields only*.
 - Envelope hashes MUST NOT appear inside resting receipts (already enforced
   by `logline.receipt.v0`).
 - Payload digests MUST be declared with their algorithm and byte length
   (`sealed-binary.v0`).
+- Vocabulary fields are never register-checked. A checker that rejects
+  `did = "diamond.privacy.bounded_leakage"` as a "prefixed id" is itself
+  non-conformant.
 - Engines SHOULD document which of their identifiers are register-4, as the
   projection kernel does in `GOVERNANCE.md`.

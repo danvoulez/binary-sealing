@@ -40,6 +40,13 @@ Aligned to the current canon:
   `conformance/vocabularies/diamond.receipts.v0.json`; the test suite
   cross-checks the two so they cannot drift. Includes the supersession
   resolution rule (`is_active_claim`).
+- **Portable-claim classifier and binary layer** (`diamonds/shell_v0.py`) —
+  implements `conformance/portable-claims.v0.md` (every shell field must be
+  content-addressed, receipt-backed, rights-scoped, structural, or under
+  `unverified`; unclassifiable claims fail) and the `sealed-binary.v0`
+  verification (payload digest, Merkle source commitments, diamond_id
+  binding), field-aware per `identity-registers.v0.md`. Vectors in
+  `conformance/vectors/sealed-binary/`.
 
 Known **not yet aligned** (engine-internal, pending):
 
