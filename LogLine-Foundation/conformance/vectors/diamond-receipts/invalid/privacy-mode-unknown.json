@@ -1,0 +1,20 @@
+{
+  "receipt_version": "logline.receipt.v0",
+  "who": "redteam.lab.v1",
+  "did": "bounded_leakage",
+  "this": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "when": "2026-07-05T21:00:00Z",
+  "confirmed_by": "",
+  "if_ok": "",
+  "if_doubt": "",
+  "if_not": "",
+  "status": "executed",
+  "json_canonicalization": "jcs-rfc8785",
+  "privacy_mode": "vibes",
+  "hashes": {
+    "tuple_hash": "e04a160508074affc157b9d07c45f9920cf744324d908329865c7a0566ddb463",
+    "content_hash": "132eb9d2fced2965879155b6c86ee0b404ce337d8ac345d7b0bba49c015fd799",
+    "algorithm": "sha256"
+  },
+  "id": "132eb9d2fced2965879155b6c86ee0b404ce337d8ac345d7b0bba49c015fd799"
+}

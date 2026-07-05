@@ -1,0 +1,21 @@
+{
+  "receipt_version": "logline.receipt.v0",
+  "who": "authority.lab.v1",
+  "did": "superseded_claim",
+  "this": "62946eea86d5c911af99a553f319d09aab91bc8abd069bb2be7408e2bf5c8e5e",
+  "when": "2027-03-01T09:00:00Z",
+  "confirmed_by": "",
+  "if_ok": "",
+  "if_doubt": "",
+  "if_not": "",
+  "status": "executed",
+  "json_canonicalization": "jcs-rfc8785",
+  "diamond_id": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "reason": "extraction attack published 2027-03; suite v1 no longer sufficient",
+  "hashes": {
+    "tuple_hash": "126d743925ffe2563e8456eee209c7a6e096d93017a17e26d48c65c3629effd4",
+    "content_hash": "205ea69d7a3f3ed8786e69b2bcee647ded4900f42d159500cdf4872d6591cbdf",
+    "algorithm": "sha256"
+  },
+  "id": "205ea69d7a3f3ed8786e69b2bcee647ded4900f42d159500cdf4872d6591cbdf"
+}
