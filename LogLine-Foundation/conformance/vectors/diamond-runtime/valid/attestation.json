@@ -1,0 +1,22 @@
+{
+  "receipt_version": "logline.receipt.v0",
+  "who": "runtime.enclave.v1",
+  "did": "attested_runtime",
+  "this": "7777777777777777777777777777777777777777777777777777777777777777",
+  "when": "2026-07-05T22:00:00Z",
+  "confirmed_by": "",
+  "if_ok": "",
+  "if_doubt": "",
+  "if_not": "",
+  "status": "executed",
+  "json_canonicalization": "jcs-rfc8785",
+  "trust_anchor": "amd.sev-snp",
+  "quote_digest": "2222222222222222222222222222222222222222222222222222222222222222",
+  "measurement_log_digest": "3333333333333333333333333333333333333333333333333333333333333333",
+  "hashes": {
+    "tuple_hash": "178431f33fd1a3a89fb50839f7d93b21d2617177b86e73f0b285f1089039f40f",
+    "content_hash": "bd58a90fbcf7671805165934b225dc78cc83f019772ceb3120177f89f56948dd",
+    "algorithm": "sha256"
+  },
+  "id": "bd58a90fbcf7671805165934b225dc78cc83f019772ceb3120177f89f56948dd"
+}

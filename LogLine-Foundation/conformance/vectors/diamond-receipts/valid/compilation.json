@@ -1,0 +1,24 @@
+{
+  "receipt_version": "logline.receipt.v0",
+  "who": "compiler.lab.v1",
+  "did": "compiled_diamond",
+  "this": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "when": "2026-07-05T21:00:00Z",
+  "confirmed_by": "custodian.lab.v1",
+  "if_ok": "",
+  "if_doubt": "",
+  "if_not": "",
+  "status": "executed",
+  "json_canonicalization": "jcs-rfc8785",
+  "compiler_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "process_contract_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "payload_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "source_merkle_root": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "container_profile": "raw.bytes.v0",
+  "hashes": {
+    "tuple_hash": "d5d475165bcedbe01165b8a367de1f3e4ff7fcf6dee34c0d8baaff0237b5567a",
+    "content_hash": "f5fb6f0065b4733fed6ebee2b250f7a85806a34be15ae7317b20e1b9e6bc8d4c",
+    "algorithm": "sha256"
+  },
+  "id": "f5fb6f0065b4733fed6ebee2b250f7a85806a34be15ae7317b20e1b9e6bc8d4c"
+}

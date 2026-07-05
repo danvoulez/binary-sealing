@@ -1,0 +1,22 @@
+{
+  "receipt_version": "logline.receipt.v0",
+  "who": "rights.lab.v1",
+  "did": "granted_access",
+  "this": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "when": "2026-07-05T21:00:00Z",
+  "confirmed_by": "",
+  "if_ok": "",
+  "if_doubt": "",
+  "if_not": "",
+  "status": "claimed",
+  "json_canonicalization": "jcs-rfc8785",
+  "grantee": "buyer.acme.v1",
+  "mode": "train",
+  "rights_policy_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+  "hashes": {
+    "tuple_hash": "46c0cbe70cbcb5c721a1810f4f3cd285f7a0c7fe01daed7f04f06ee7d3073c37",
+    "content_hash": "bb807b1154f09d04fbfb83936c88600f485209034f9a569a6d255d0764bc98e4",
+    "algorithm": "sha256"
+  },
+  "id": "bb807b1154f09d04fbfb83936c88600f485209034f9a569a6d255d0764bc98e4"
+}

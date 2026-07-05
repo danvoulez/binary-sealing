@@ -1,0 +1,20 @@
+{
+  "receipt_version": "logline.receipt.v0",
+  "who": "authority.lab.v1",
+  "did": "superseded_claim",
+  "this": "62946eea86d5c911af99a553f319d09aab91bc8abd069bb2be7408e2bf5c8e5e",
+  "when": "2026-07-05T21:00:00Z",
+  "confirmed_by": "",
+  "if_ok": "",
+  "if_doubt": "",
+  "if_not": "",
+  "status": "executed",
+  "json_canonicalization": "jcs-rfc8785",
+  "diamond_id": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "hashes": {
+    "tuple_hash": "320a63c9b41b6774a02f0fdc90389dcc3573527ba4787641470748469d7d515e",
+    "content_hash": "f120e8503658f636c3f7a862ff92072e6f9b8fb40d6201d3585e066c5a27807a",
+    "algorithm": "sha256"
+  },
+  "id": "f120e8503658f636c3f7a862ff92072e6f9b8fb40d6201d3585e066c5a27807a"
+}

@@ -1,0 +1,41 @@
+{
+  "description": "Portable shell: receipts reference the real compilation and privacy receipts from vectors/diamond-receipts/valid. Free claims quarantined under 'unverified'.",
+  "manifest": {
+    "seal_version": "sealed-binary.v0",
+    "kind": "compiled_training_diamond.v1",
+    "payload": {
+      "digest": "8a851ff82ee7048ad09ec3847f1ddf44944104d2cbd17ef4e3db22c6785a0d45",
+      "algorithm": "sha256",
+      "length": 8,
+      "container_profile": "raw.bytes.v0"
+    },
+    "source_commitments": {
+      "merkle_root": "9469af92426bc4ce62e6a20800ab62031aac6ee0be72e2fef4a6692d6e0d75f0",
+      "algorithm": "sha256",
+      "leaf_count": 3
+    },
+    "process_contract_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "compiler_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "rights_policy_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "receipts": [
+      "f5fb6f0065b4733fed6ebee2b250f7a85806a34be15ae7317b20e1b9e6bc8d4c",
+      "62946eea86d5c911af99a553f319d09aab91bc8abd069bb2be7408e2bf5c8e5e"
+    ],
+    "json_canonicalization": "jcs-rfc8785",
+    "unverified": {
+      "marketing": "compiled from a premium private corpus",
+      "expected_market": "legal-tech"
+    }
+  },
+  "payload_hex": "0001020304050607",
+  "source_strings_utf8": [
+    "source-a",
+    "source-b",
+    "source-c"
+  ],
+  "expected": {
+    "diamond_id": "78f6a8d8b5ace3437925a3ce39fa4834f5e16d1cbedb40913ec138562a9311b9",
+    "classification_ok": true,
+    "portable": true
+  }
+}

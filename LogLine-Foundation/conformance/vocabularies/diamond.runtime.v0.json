@@ -1,0 +1,56 @@
+{
+  "vocabulary_version": "diamond.runtime.v0",
+  "over": "logline.receipt.v0",
+  "status": "executed",
+  "kinds": {
+    "attestation": {
+      "did": "attested_runtime",
+      "this": "hex64",
+      "required_aux": {
+        "trust_anchor": "string",
+        "quote_digest": "hex64"
+      },
+      "optional_aux": {
+        "expires": "string",
+        "measurement_log_digest": "hex64"
+      }
+    },
+    "invocation": {
+      "did": "invoked_diamond",
+      "this": "hex64",
+      "required_aux": {
+        "capability_receipt_id": "hex64",
+        "attestation_receipt_id": "hex64",
+        "mode": "enum:query|train|eval|attest"
+      },
+      "optional_aux": {
+        "input_digest": "hex64",
+        "limits": "object"
+      }
+    },
+    "output": {
+      "did": "released_output",
+      "this": "hex64",
+      "required_aux": {
+        "invocation_receipt_id": "hex64",
+        "output_digest": "hex64",
+        "output_class": "enum:model_delta|score|answer|attestation|receipt",
+        "firewall_policy_hash": "hex64"
+      },
+      "optional_aux": {
+        "output_length": "number"
+      }
+    },
+    "refusal": {
+      "did": "refused_invocation",
+      "this": "hex64",
+      "required_aux": {
+        "reason": "string"
+      },
+      "optional_aux": {
+        "capability_receipt_id": "hex64",
+        "attestation_receipt_id": "hex64"
+      }
+    }
+  }
+}

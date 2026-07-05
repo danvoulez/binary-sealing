@@ -29,6 +29,7 @@ python examples/07_build_diamond_candidate.py
 python examples/08_seal_diamond.py
 python examples/09_access_diamond.py
 python examples/11_resolve_current_diamond.py
+python examples/12_seal_binary_diamond.py
 ```
 
 ## Invariants

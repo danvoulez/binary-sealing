@@ -1,0 +1,24 @@
+{
+  "receipt_version": "logline.receipt.v0",
+  "who": "runtime.enclave.v1",
+  "did": "released_output",
+  "this": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "when": "2026-07-05T22:00:00Z",
+  "confirmed_by": "",
+  "if_ok": "",
+  "if_doubt": "",
+  "if_not": "",
+  "status": "executed",
+  "json_canonicalization": "jcs-rfc8785",
+  "invocation_receipt_id": "df33498c317127c0b8694fba5ae9becea022ad72fb71c5043be313e8fcb6ef14",
+  "output_digest": "5555555555555555555555555555555555555555555555555555555555555555",
+  "output_class": "model_delta",
+  "firewall_policy_hash": "6666666666666666666666666666666666666666666666666666666666666666",
+  "output_length": 1048576,
+  "hashes": {
+    "tuple_hash": "fc3b705671820154b560eecdb882eeba3fe0f33b2fbed4f39aff2e244fc5e53e",
+    "content_hash": "307b8ce1ca84d141b1f59f5f8165ff7bad500cdad50d6593a0a1f4d758b0a8ab",
+    "algorithm": "sha256"
+  },
+  "id": "307b8ce1ca84d141b1f59f5f8165ff7bad500cdad50d6593a0a1f4d758b0a8ab"
+}
