@@ -14,7 +14,7 @@ Hashes must be reproducible byte-for-byte across implementations. Two engines pa
 4. **Numbers** follow ECMAScript `Number.prototype.toString` (specifically, ES6 §7.1.12.1):
    - integers in safe range: bare digits (`42`, not `42.0`)
    - non-integers: shortest decimal that round-trips
-   - no `+` sign on exponent, lowercase `e`
+   - lowercase `e`; exponent carries its sign (`1e+21`, `1e-7`) per ES `ToString`
    - no leading zeros (except `0` itself and `0.x`)
    - no trailing zeros after decimal point
 5. **Booleans and null** are `true`, `false`, `null` (lowercase, unquoted).
