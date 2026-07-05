@@ -17,6 +17,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field, asdict
 from typing import Optional
 
+from logline_kernel.core import receipt_v0
 from logline_kernel.core.hashing import content_hash
 from logline_kernel.core.time import is_iso8601
 
@@ -71,21 +72,38 @@ class Act:
     did: str
     this: str
     when: str
-    confirmed_by: Optional[str] = None
-    if_ok: Optional[str] = None
-    if_doubt: Optional[str] = None
-    if_not: Optional[str] = None
+    confirmed_by: str = ""
+    if_ok: str = ""
+    if_doubt: str = ""
+    if_not: str = ""
     status: str = "draft"
     aux: dict = field(default_factory=dict)
 
     def body(self) -> dict:
+        """Canon content body: nine slots plus AUX as free top-level fields.
+
+        Per the Foundation canon (logline.receipt.v0), AUX is any non-reserved
+        top-level field — included in content_hash, excluded from tuple_hash.
+        AUX must not shadow the nine slots or canon metadata names.
+        """
         d = {k: getattr(self, k) for k in ACT_SLOTS}
-        d["AUX"] = self.aux
+        for key in self.aux:
+            if key in receipt_v0.RESERVED_FIELDS:
+                raise ValueError(f"aux field shadows reserved name: {key}")
+            if key in receipt_v0.FORBIDDEN_LEGACY_FIELDS:
+                raise ValueError(f"aux field uses forbidden legacy name: {key}")
+        d.update(self.aux)
         return d
 
     @property
+    def tuple_hash(self) -> str:
+        """D42: identity of the pure act — the nine slots, nothing else."""
+        return content_hash({k: getattr(self, k) for k in ACT_SLOTS})
+
+    @property
     def process_id(self) -> str:
-        return content_hash(self.body(), "proc:")
+        """Canon content hash (bare 64-hex): id == content_hash."""
+        return content_hash(self.body())
 
     @property
     def act_id(self) -> str:
@@ -95,6 +113,26 @@ class Act:
         """
         return self.process_id
 
+    def to_receipt(self, when: Optional[str] = None) -> dict:
+        """Emit this act as a full conformant logline.receipt.v0.
+
+        An Act at rest and an emitted Receipt are different objects: the
+        receipt adds canon metadata (receipt_version, json_canonicalization,
+        hashes, id), so their content hashes legitimately differ.
+        """
+        return receipt_v0.emit(
+            who=self.who,
+            did=self.did,
+            this=self.this,
+            when=when if when is not None else self.when,
+            confirmed_by=self.confirmed_by,
+            if_ok=self.if_ok,
+            if_doubt=self.if_doubt,
+            if_not=self.if_not,
+            status=self.status,
+            aux=self.aux or None,
+        )
+
     @classmethod
     def from_dict(cls, d: dict) -> "Act":
         aux = d.get("AUX", d.get("aux", {})) or {}
@@ -103,10 +141,10 @@ class Act:
             did=d.get("did", ""),
             this=d.get("this", ""),
             when=d.get("when", ""),
-            confirmed_by=d.get("confirmed_by"),
-            if_ok=d.get("if_ok"),
-            if_doubt=d.get("if_doubt"),
-            if_not=d.get("if_not"),
+            confirmed_by=d.get("confirmed_by") or "",
+            if_ok=d.get("if_ok") or "",
+            if_doubt=d.get("if_doubt") or "",
+            if_not=d.get("if_not") or "",
             status=d.get("status", "draft"),
             aux=aux,
         )
