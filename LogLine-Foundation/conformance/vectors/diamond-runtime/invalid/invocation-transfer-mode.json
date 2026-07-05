@@ -1,0 +1,22 @@
+{
+  "receipt_version": "logline.receipt.v0",
+  "who": "runtime.enclave.v1",
+  "did": "invoked_diamond",
+  "this": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "when": "2026-07-05T22:00:00Z",
+  "confirmed_by": "",
+  "if_ok": "",
+  "if_doubt": "",
+  "if_not": "",
+  "status": "executed",
+  "json_canonicalization": "jcs-rfc8785",
+  "capability_receipt_id": "6994ca99b9d330bd721102aaf040e55dca8d70f625b6550d7250883ecb7b3b3c",
+  "attestation_receipt_id": "bd58a90fbcf7671805165934b225dc78cc83f019772ceb3120177f89f56948dd",
+  "mode": "transfer",
+  "hashes": {
+    "tuple_hash": "99540966702039aebd3f28183cfe26fa7a7adae90d8a96405c36ee5a9c003a1e",
+    "content_hash": "f86b23a8940ec21800b1f532dea18c0f98dbb24368bf0753364958782c8123d1",
+    "algorithm": "sha256"
+  },
+  "id": "f86b23a8940ec21800b1f532dea18c0f98dbb24368bf0753364958782c8123d1"
+}

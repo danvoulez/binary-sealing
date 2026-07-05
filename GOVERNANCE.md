@@ -40,6 +40,14 @@ Aligned to the current canon:
   `conformance/vocabularies/diamond.receipts.v0.json`; the test suite
   cross-checks the two so they cannot drift. Includes the supersession
   resolution rule (`is_active_claim`).
+- **Runtime vocabularies and chain verification** (`diamonds/runtime_v0.py`,
+  `diamonds/vocabulary.py`) — implements
+  `conformance/vocabularies/diamond.runtime.v0` (attestation, invocation,
+  output, refusal) over the shared vocabulary engine, plus
+  `verify_output_chain`: link resolution, one-Diamond consistency, granted
+  mode, and unsuperseded attestation/capability. Carries the honesty
+  clause: runtime claims are attestations resting on trust anchors, never
+  computation-verifiable facts.
 - **Portable-claim classifier and binary layer** (`diamonds/shell_v0.py`) —
   implements `conformance/portable-claims.v0.md` (every shell field must be
   content-addressed, receipt-backed, rights-scoped, structural, or under

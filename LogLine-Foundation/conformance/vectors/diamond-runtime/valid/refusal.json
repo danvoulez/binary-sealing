@@ -1,0 +1,21 @@
+{
+  "receipt_version": "logline.receipt.v0",
+  "who": "runtime.enclave.v1",
+  "did": "refused_invocation",
+  "this": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "when": "2026-07-05T22:00:00Z",
+  "confirmed_by": "",
+  "if_ok": "",
+  "if_doubt": "",
+  "if_not": "",
+  "status": "executed",
+  "json_canonicalization": "jcs-rfc8785",
+  "reason": "capability receipt superseded; grant no longer current",
+  "capability_receipt_id": "6994ca99b9d330bd721102aaf040e55dca8d70f625b6550d7250883ecb7b3b3c",
+  "hashes": {
+    "tuple_hash": "b02ac4404d37707a850863f496258b3d512b8f3947dd1a192db68d2993040cc1",
+    "content_hash": "6d328e2e9a93655863b9d7938155f629d16266d7e2adedd0a72529874b5be3f0",
+    "algorithm": "sha256"
+  },
+  "id": "6d328e2e9a93655863b9d7938155f629d16266d7e2adedd0a72529874b5be3f0"
+}
