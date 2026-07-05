@@ -110,6 +110,13 @@ class Act:
 
     @classmethod
     def from_dict(cls, d: dict) -> "Act":
+        # Canon records carry AUX as free top-level fields; legacy records
+        # nested them under "AUX"/"aux". Accept both.
+        aux = d.get("AUX", d.get("aux")) or {
+            k: v for k, v in d.items()
+            if k not in ACT_SLOTS
+            and k not in ("id", "hashes", "receipt_version", "json_canonicalization")
+        }
         return cls(
             who=d.get("who", ""),
             did=d.get("did", ""),
@@ -120,7 +127,7 @@ class Act:
             if_doubt=d.get("if_doubt"),
             if_not=d.get("if_not"),
             status=d.get("status", "registered"),
-            aux=d.get("AUX", d.get("aux", {})) or {},
+            aux=aux,
         )
 
 # ---------------------------------------------------------------------------
