@@ -36,11 +36,37 @@ hash-conformant.
 | kind | did | this | required AUX |
 |---|---|---|---|
 | custody | `accepted_custody` | source Merkle root | `custody_policy_hash` |
-| compilation | `compiled_diamond` | diamond_id | `compiler_hash`, `process_contract_hash`, `payload_digest`, `source_merkle_root` |
-| evaluation | `measured_effect` | diamond_id | `baseline_score`, `trained_score`, `improvement_delta` (numbers), `target_tasks`, `evaluator` |
-| privacy | `bounded_leakage` | diamond_id | `privacy_mode` ∈ `dp` \| `empirical`, plus conditional fields below |
+| compilation | `compiled_diamond` | payload digest | `compiler_hash`, `process_contract_hash`, `payload_digest`, `source_merkle_root` |
+| evaluation | `measured_effect` | payload digest | `baseline_score`, `trained_score`, `improvement_delta` (numbers), `target_tasks`, `evaluator` |
+| privacy | `bounded_leakage` | payload digest | `privacy_mode` ∈ `dp` \| `empirical`, plus conditional fields below |
 | access | `granted_access` | diamond_id | `grantee`, `mode` ∈ `query`\|`train`\|`eval`\|`attest`\|`transfer`, `rights_policy_hash` |
 | supersession | `superseded_claim` | **id of the superseded receipt** | `diamond_id`, `reason` |
+
+### The binding order (cycle rule)
+
+Building the first real sealer surfaced this immediately, so it is now
+law. `diamond_id = content_hash(manifest)`, and the manifest embeds the
+ids of its pre-sealing receipts. Therefore an embedded receipt **cannot
+address the diamond_id** — it would have to contain the hash of a
+manifest that contains it. The addressing rule:
+
+```text
+receipts embedded IN the manifest address what existed BEFORE sealing:
+  custody      -> source Merkle root
+  compilation  -> payload digest  (the compiled artifact)
+  evaluation   -> payload digest  (what was measured)
+  privacy      -> payload digest  (what was attacked)
+
+receipts ABOUT the sealed shell address the diamond_id and live
+ONLY in the ledger, after sealing:
+  access       -> diamond_id
+  supersession -> id of the superseded receipt
+```
+
+This is not a workaround; it is the correct semantics. Evaluation and
+privacy measure the *artifact* — the same payload digest sealed into the
+manifest — not the wrapper. The manifest then binds artifact, sources,
+policies, and claims into one content address.
 
 ### Privacy conditionals
 

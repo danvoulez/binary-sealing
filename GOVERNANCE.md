@@ -40,6 +40,13 @@ Aligned to the current canon:
   `conformance/vocabularies/diamond.receipts.v0.json`; the test suite
   cross-checks the two so they cannot drift. Includes the supersession
   resolution rule (`is_active_claim`).
+- **The sealer** (`diamonds/seal_binary.py`, golden path 12) — builds real
+  `sealed-binary.v0` shells from bytes, self-verifying before returning
+  (never emits a half-conformant shell). Encodes the binding order
+  (cycle rule): embedded receipts address pre-sealing objects (source
+  Merkle root, payload digest); access/supersession address diamond_id
+  and live only in the ledger. Anchored to the published spec worked
+  example by test — the sealer and the profile cannot drift.
 - **Runtime vocabularies and chain verification** (`diamonds/runtime_v0.py`,
   `diamonds/vocabulary.py`) — implements
   `conformance/vocabularies/diamond.runtime.v0` (attestation, invocation,
